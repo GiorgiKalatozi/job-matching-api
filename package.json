@@ -77,7 +77,9 @@
     ],
     "moduleNameMapper": {
       "^@app/database(|/.*)$": "<rootDir>/libs/database/src/$1",
-      "^@app/users-lib(|/.*)$": "<rootDir>/libs/users-lib/src/$1"
+      "^@app/users-lib(|/.*)$": "<rootDir>/libs/users-lib/src/$1",
+      "^@app/job-seekers-lib(|/.*)$": "<rootDir>/libs/job-seekers-lib/src/$1",
+      "^@app/auth-lib(|/.*)$": "<rootDir>/libs/auth-lib/src/$1"
     }
   }
 }

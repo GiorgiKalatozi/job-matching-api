@@ -16,6 +16,15 @@
         "tsConfigPath": "libs/database/tsconfig.lib.json"
       }
     },
+    "job-seekers-lib": {
+      "type": "library",
+      "root": "libs/job-seekers-lib",
+      "entryFile": "index",
+      "sourceRoot": "libs/job-seekers-lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/job-seekers-lib/tsconfig.lib.json"
+      }
+    },
     "users-lib": {
       "type": "library",
       "root": "libs/users-lib",
@@ -23,6 +32,15 @@
       "sourceRoot": "libs/users-lib/src",
       "compilerOptions": {
         "tsConfigPath": "libs/users-lib/tsconfig.lib.json"
+      }
+    },
+    "auth-lib": {
+      "type": "library",
+      "root": "libs/auth-lib",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth-lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth-lib/tsconfig.lib.json"
       }
     }
   }
