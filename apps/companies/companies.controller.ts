@@ -20,8 +20,9 @@ export class CompaniesController {
 
   @Public()
   @Get()
+  @HttpCode(HttpStatus.OK)
   async findAll() {
-    return 'hello';
+    return this.companiesLibService.findAll();
   }
 
   @Post()

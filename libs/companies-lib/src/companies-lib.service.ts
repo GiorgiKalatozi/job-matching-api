@@ -11,6 +11,10 @@ export class CompaniesLibService {
     private readonly companiesRepository: Repository<Company>,
   ) {}
 
+  async findAll(): Promise<Company[]> {
+    return this.companiesRepository.find();
+  }
+
   async create(
     createCompanyDto: CreateCompanyDTO,
     userId: number,

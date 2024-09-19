@@ -11,6 +11,9 @@ import { APP_GUARD } from '@nestjs/core';
 import { RolesGuard } from '@app/common';
 import { CompaniesModule } from './companies/companies.module';
 import { AccessTokenGuard } from '@app/auth-lib';
+import { CompaniesController } from './companies/companies.controller';
+import { JobPostingsModule } from './job-postings/job-postings.module';
+import { JobPostingsController } from './job-postings/job-postings.controller';
 
 @Module({
   imports: [
@@ -20,8 +23,15 @@ import { AccessTokenGuard } from '@app/auth-lib';
     UsersModule,
     AuthModule,
     CompaniesModule,
+    JobPostingsModule,
   ],
-  controllers: [JobSeekersController, AuthController, UsersController],
+  controllers: [
+    JobSeekersController,
+    AuthController,
+    UsersController,
+    CompaniesController,
+    JobPostingsController,
+  ],
   providers: [
     {
       provide: APP_GUARD,

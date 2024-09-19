@@ -26,4 +26,7 @@ export class JobSeeker extends CommonEntity {
 
   @Column({ nullable: true })
   desiredSalary: number;
+
+  @Column()
+  userId: number;
 }
