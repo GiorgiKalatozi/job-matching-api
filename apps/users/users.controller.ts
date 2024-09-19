@@ -1,4 +1,4 @@
-import { Role, Roles } from '@app/common';
+import { Public, Role, Roles } from '@app/common';
 import { User, UsersLibService } from '@app/users-lib';
 import {
   Body,
@@ -10,7 +10,7 @@ import {
   Post,
 } from '@nestjs/common';
 
-@Controller('users')
+@Controller({ path: 'users', version: '1' })
 export class UsersController {
   constructor(private readonly usersService: UsersLibService) {}
 
@@ -20,12 +20,13 @@ export class UsersController {
     return this.usersService.create(user);
   }
 
+  @Public()
   @Get()
-  @Roles(Role.ADMIN)
   findAll(): Promise<User[]> {
     return this.usersService.findAll();
   }
 
+  @Public()
   @Get(':id')
   findOne(@Param('id') id: number): Promise<User> {
     return this.usersService.findOne(id);
