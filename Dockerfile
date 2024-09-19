@@ -23,4 +23,4 @@ RUN pnpm run build
 EXPOSE 3000
 
 # Start your Nest.js application
-CMD ["pnpm", "start:prod"]
+CMD ["pnpm", "start:dev"]

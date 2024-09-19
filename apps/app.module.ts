@@ -6,6 +6,10 @@ import { JobSeekersModule } from './job-seekers/job-seekers.module';
 import { UsersModule } from './users/users.module';
 import { AuthController } from './auth/auth.controller';
 import { AuthModule } from './auth/auth.module';
+import { UsersController } from './users/users.controller';
+import { APP_GUARD } from '@nestjs/core';
+import { RolesGuard } from '@app/common';
+import { AccessTokenGuard } from '@app/auth-lib';
 
 @Module({
   imports: [
@@ -15,7 +19,16 @@ import { AuthModule } from './auth/auth.module';
     UsersModule,
     AuthModule,
   ],
-  controllers: [JobSeekersController, AuthController],
-  providers: [],
+  controllers: [JobSeekersController, AuthController, UsersController],
+  providers: [
+    {
+      provide: APP_GUARD,
+      useClass: RolesGuard,
+    },
+    {
+      provide: APP_GUARD,
+      useClass: AccessTokenGuard,
+    },
+  ],
 })
 export class AppModule {}

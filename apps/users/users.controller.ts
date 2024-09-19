@@ -1,3 +1,4 @@
+import { Role, Roles } from '@app/common';
 import { User, UsersLibService } from '@app/users-lib';
 import {
   Body,
@@ -14,30 +15,31 @@ export class UsersController {
   constructor(private readonly usersService: UsersLibService) {}
 
   @Post()
-  // @Roles(Role.Admin)
-  public create(user: User): Promise<User> {
+  @Roles(Role.ADMIN)
+  create(user: User): Promise<User> {
     return this.usersService.create(user);
   }
 
   @Get()
-  public findAll(): Promise<User[]> {
+  @Roles(Role.ADMIN)
+  findAll(): Promise<User[]> {
     return this.usersService.findAll();
   }
 
   @Get(':id')
-  public findOne(@Param('id') id: number): Promise<User> {
+  findOne(@Param('id') id: number): Promise<User> {
     return this.usersService.findOne(id);
   }
 
+  @Roles(Role.ADMIN)
   @Patch()
-  // @Roles(Role.Admin)
-  public update(@Param('id') id: string, @Body() user: User): Promise<User> {
-    return this.update(id, user);
+  update(@Param('id') id: number, @Body() user: User): Promise<User> {
+    return this.usersService.update(id, user);
   }
 
   @Delete()
-  // @Roles(Role.Admin)
-  public remove(@Param('id') id: number): Promise<void> {
+  @Roles(Role.ADMIN)
+  remove(@Param('id') id: number): Promise<void> {
     return this.usersService.remove(id);
   }
 }

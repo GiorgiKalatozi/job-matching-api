@@ -1,7 +1,8 @@
 import { CommonEntity } from '@app/common';
 import { Role } from '@app/common/enums';
-import { Column } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 
+@Entity({ name: 'users' })
 export class User extends CommonEntity {
   @Column({ unique: true })
   email: string;
