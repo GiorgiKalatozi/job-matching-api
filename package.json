@@ -91,7 +91,10 @@
       "^@app/users-lib(|/.*)$": "<rootDir>/libs/users-lib/src/$1",
       "^@app/job-seekers-lib(|/.*)$": "<rootDir>/libs/job-seekers-lib/src/$1",
       "^@app/auth-lib(|/.*)$": "<rootDir>/libs/auth-lib/src/$1",
-      "^@app/common(|/.*)$": "<rootDir>/libs/common/src/$1"
+      "^@app/common(|/.*)$": "<rootDir>/libs/common/src/$1",
+      "^@app/skills-lib(|/.*)$": "<rootDir>/libs/skills-lib/src/$1",
+      "^@app/job-postings-lib(|/.*)$": "<rootDir>/libs/job-postings-lib/src/$1",
+      "^@app/companies-lib(|/.*)$": "<rootDir>/libs/companies-lib/src/$1"
     }
   }
 }

@@ -20,6 +20,12 @@
     "@app/auth-lib/(.*)": "<rootDir>/../libs/auth-lib/src/$1",
     "@app/auth-lib": "<rootDir>/../libs/auth-lib/src",
     "@app/common/(.*)": "<rootDir>/../libs/common/src/$1",
-    "@app/common": "<rootDir>/../libs/common/src"
+    "@app/common": "<rootDir>/../libs/common/src",
+    "@app/skills-lib/(.*)": "<rootDir>/../libs/skills-lib/src/$1",
+    "@app/skills-lib": "<rootDir>/../libs/skills-lib/src",
+    "@app/job-postings-lib/(.*)": "<rootDir>/../libs/job-postings-lib/src/$1",
+    "@app/job-postings-lib": "<rootDir>/../libs/job-postings-lib/src",
+    "@app/companies-lib/(.*)": "<rootDir>/../libs/companies-lib/src/$1",
+    "@app/companies-lib": "<rootDir>/../libs/companies-lib/src"
   }
 }

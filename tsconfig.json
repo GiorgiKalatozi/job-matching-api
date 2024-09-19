@@ -49,6 +49,24 @@
       ],
       "@app/common/*": [
         "libs/common/src/*"
+      ],
+      "@app/skills-lib": [
+        "libs/skills-lib/src"
+      ],
+      "@app/skills-lib/*": [
+        "libs/skills-lib/src/*"
+      ],
+      "@app/job-postings-lib": [
+        "libs/job-postings-lib/src"
+      ],
+      "@app/job-postings-lib/*": [
+        "libs/job-postings-lib/src/*"
+      ],
+      "@app/companies-lib": [
+        "libs/companies-lib/src"
+      ],
+      "@app/companies-lib/*": [
+        "libs/companies-lib/src/*"
       ]
     }
   }

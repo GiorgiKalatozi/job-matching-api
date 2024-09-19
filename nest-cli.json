@@ -51,6 +51,33 @@
       "compilerOptions": {
         "tsConfigPath": "libs/common/tsconfig.lib.json"
       }
+    },
+    "skills-lib": {
+      "type": "library",
+      "root": "libs/skills-lib",
+      "entryFile": "index",
+      "sourceRoot": "libs/skills-lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/skills-lib/tsconfig.lib.json"
+      }
+    },
+    "job-postings-lib": {
+      "type": "library",
+      "root": "libs/job-postings-lib",
+      "entryFile": "index",
+      "sourceRoot": "libs/job-postings-lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/job-postings-lib/tsconfig.lib.json"
+      }
+    },
+    "companies-lib": {
+      "type": "library",
+      "root": "libs/companies-lib",
+      "entryFile": "index",
+      "sourceRoot": "libs/companies-lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/companies-lib/tsconfig.lib.json"
+      }
     }
   }
 }
