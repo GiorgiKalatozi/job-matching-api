@@ -1,7 +1,10 @@
 services:
   app:
     container_name: job-matching-api
-    build: .
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     env_file:
       - .env
     ports:

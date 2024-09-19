@@ -43,6 +43,12 @@
       ],
       "@app/auth-lib/*": [
         "libs/auth-lib/src/*"
+      ],
+      "@app/common": [
+        "libs/common/src"
+      ],
+      "@app/common/*": [
+        "libs/common/src/*"
       ]
     }
   }

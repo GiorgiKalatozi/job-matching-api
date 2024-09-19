@@ -18,6 +18,8 @@
     "@app/job-seekers-lib/(.*)": "<rootDir>/../libs/job-seekers-lib/src/$1",
     "@app/job-seekers-lib": "<rootDir>/../libs/job-seekers-lib/src",
     "@app/auth-lib/(.*)": "<rootDir>/../libs/auth-lib/src/$1",
-    "@app/auth-lib": "<rootDir>/../libs/auth-lib/src"
+    "@app/auth-lib": "<rootDir>/../libs/auth-lib/src",
+    "@app/common/(.*)": "<rootDir>/../libs/common/src/$1",
+    "@app/common": "<rootDir>/../libs/common/src"
   }
 }
