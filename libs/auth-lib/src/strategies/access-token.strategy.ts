@@ -12,10 +12,10 @@ export class AccessTokenStrategy extends PassportStrategy(
 ) {
   constructor(public readonly config: ConfigService) {
     super({
-      // extract jw t from authorization header
+      // extract jwt from authorization header
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       // verify jwt signature
-      secretOrKey: config.get('ACCESS_TOKEN_SECRET'),
+      secretOrKey: 'at-secret',
     });
   }
 

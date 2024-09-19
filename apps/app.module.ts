@@ -9,6 +9,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersController } from './users/users.controller';
 import { APP_GUARD } from '@nestjs/core';
 import { RolesGuard } from '@app/common';
+import { CompaniesModule } from './companies/companies.module';
 import { AccessTokenGuard } from '@app/auth-lib';
 
 @Module({
@@ -18,6 +19,7 @@ import { AccessTokenGuard } from '@app/auth-lib';
     JobSeekersModule,
     UsersModule,
     AuthModule,
+    CompaniesModule,
   ],
   controllers: [JobSeekersController, AuthController, UsersController],
   providers: [

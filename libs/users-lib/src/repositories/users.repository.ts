@@ -13,18 +13,18 @@ export class UsersRepository {
   }
 
   async findAll(): Promise<User[]> {
-    return await this.usersRepository.find();
+    return this.usersRepository.find();
   }
 
   async findOne(id: number): Promise<User> {
-    return await this.usersRepository.findOne({ where: { id } });
+    return this.usersRepository.findOne({ where: { id } });
   }
 
   async findOneWithUsername(username: string): Promise<User> {
-    return await this.usersRepository.findOne({ where: { email: username } });
+    return this.usersRepository.findOne({ where: { email: username } });
   }
   async findOneWithEmail(email: string): Promise<User> {
-    return await this.usersRepository.findOne({ where: { email: email } });
+    return this.usersRepository.findOne({ where: { email: email } });
   }
 
   async update(id: number, user: User): Promise<User> {

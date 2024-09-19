@@ -45,6 +45,8 @@ export class AuthLibService {
   async signOut(userId: number): Promise<void> {
     const user = await this.usersRepository.findOne(userId);
 
+    if (!user.refreshToken) return;
+
     user.refreshToken = null;
 
     await this.usersRepository.save(user);
@@ -85,7 +87,7 @@ export class AuthLibService {
         },
         {
           secret: 'at-secret',
-          expiresIn: 60 * 15,
+          expiresIn: '15m',
         },
       ),
       this.jwtService.signAsync(
@@ -95,7 +97,7 @@ export class AuthLibService {
         },
         {
           secret: 'rt-secret',
-          expiresIn: 60 * 60 * 24 * 7,
+          expiresIn: '7d',
         },
       ),
     ]);

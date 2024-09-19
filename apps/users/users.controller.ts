@@ -20,7 +20,7 @@ export class UsersController {
     return this.usersService.create(user);
   }
 
-  @Public()
+  // @Public()
   @Get()
   findAll(): Promise<User[]> {
     return this.usersService.findAll();
